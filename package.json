@@ -1,0 +1,28 @@
+{
+    "name": "cse341",
+    "version": "1.0.0",
+    "description": "NodeJS projects",
+    "main": "app.js",
+    "dependencies": {
+        "body-parser": "^1.19.1",
+        "ejs": "^3.1.6",
+        "express": "^4.17.2",
+        "nodemon": "^2.0.15",
+        "mysql2": "^2.3.3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/willbrown600/CSE341.git"
+    },
+    "author": "Will Brown",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/willbrown600/CSE341/issues"
+    },
+    "homepage": "https://github.com/willbrown600/CSE341#readme"
+}
