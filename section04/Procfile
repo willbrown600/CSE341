@@ -1,1 +1,1 @@
-web: node /section04/app.js
+web: node app.js
