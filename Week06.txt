@@ -1,0 +1,39 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+https://cse341bills5.herokuapp.com/
+https://cse341billsprojects.herokuapp.com
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/willbrown600/CSE341
+https://github.com/willbrown600/CSE341-Projects
+
+3. Briefly list and describe the elements of the application that are functioning. Most things are not running as they should. I am struggling to understand heroku.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Heroku. 
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+Nothing is cool until it actually works.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+
+More assistance with learning. I'm just trying to keep up and understand what it is I am learning.
+
+7. Please select the category you feel best describes your assignment:
+   
+   1 - Some attempt was made
+   
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I am frustrated and feel like this whole course was designed to set us all up to fail.
+
+
+
+
+
+
+const MONGODB_URI =
+  'mongodb+srv://brown18085:Speights1979@cluster0.dmgfy.mongodb.net/Shop';

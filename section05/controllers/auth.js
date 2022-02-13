@@ -7,10 +7,18 @@ const User = require('../models/user');
 const transporter = nodemailer.createTransport(
     sendInBlueTransport({
         auth: {
-            api_key: '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'
+            api_key: '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'
         }
     })
 );
+
+var SibApiV3Sdk = require('sib-api-v3-sdk');
+var defaultClient = SibApiV3Sdk.ApiClient.instance;
+//Instantiate the client
+var apiKey = defaultClient.authentications['api-key'];
+apiKey.apiKey = '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';
+//var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+//var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign();
 
 exports.getLogin = (req, res, next) => {
     let message = req.flash('error');
