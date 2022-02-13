@@ -1,1 +1,1 @@
-web: node /section04/app.js
+worker: node /section06/app.js
