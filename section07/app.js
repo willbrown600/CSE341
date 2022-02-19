@@ -93,7 +93,10 @@ app.use((error, req, res, next) => {
 const port = process.env.PORT || 3000;
 
 mongoose
-    .connect(MONGODB_URI)
+    .connect(MONGODB_URI, {
+        useNewUrlParser: true,
+        use_unified_topology: true
+    })
     .then(result => {
         app.listen(port);
     })
