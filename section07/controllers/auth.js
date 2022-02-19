@@ -2,7 +2,23 @@ const crypto = require('crypto');
 
 const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
-const sendInBlueTransport = require('nodemailer-sendinblue-transport');
+const sendgridTransport = require('nodemailer-sendgrid-transport');
+const {
+    validationResult
+} = require('express-validator/check');
+
+const User = require('../models/user');
+
+const transporter = nodemailer.createTransport(
+    sendgridTransport({
+        auth: {
+            api_key: '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'
+        }
+    })
+);
+//Cannot seem to get SeninBlue to work properly.
+
+/* const sendInBlueTransport = require('nodemailer-sendinblue-transport');
 
 const User = require('../models/user');
 
@@ -20,7 +36,7 @@ var defaultClient = SibApiV3Sdk.ApiClient.instance;
 var apiKey = defaultClient.authentications['api-key'];
 apiKey.apiKey = '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';
 var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
-var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign();
+var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign(); */
 
 exports.getLogin = (req, res, next) => {
     let message = req.flash('error');
