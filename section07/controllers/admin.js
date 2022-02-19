@@ -5,7 +5,7 @@ const {
 } = require('express-validator/check');
 
 const Product = require('../models/product');
-
+//getting product middleware
 exports.getAddProduct = (req, res, next) => {
     res.render('admin/edit-product', {
         pageTitle: 'Add Product',
@@ -17,7 +17,9 @@ exports.getAddProduct = (req, res, next) => {
     });
 };
 
+//posting product middleware
 exports.postAddProduct = (req, res, next) => {
+
     const title = req.body.title;
     const imageUrl = req.body.imageUrl;
     const price = req.body.price;
@@ -41,15 +43,16 @@ exports.postAddProduct = (req, res, next) => {
             validationErrors: errors.array()
         });
     }
-
+    //then create a new product.
     const product = new Product({
-        // _id: new mongoose.Types.ObjectId('5badf72403fd8b5be0366e81'),
+
         title: title,
         price: price,
         description: description,
         imageUrl: imageUrl,
         userId: req.user
     });
+    //save product asynchronously
     product
         .save()
         .then(result => {
@@ -58,7 +61,7 @@ exports.postAddProduct = (req, res, next) => {
             res.redirect('/admin/products');
         })
         .catch(err => {
-            // return res.status(500).render('admin/edit-product', {
+            /* // return res.status(500).render('admin/edit-product', {
             //   pageTitle: 'Add Product',
             //   path: '/admin/add-product',
             //   editing: false,
@@ -72,7 +75,7 @@ exports.postAddProduct = (req, res, next) => {
             //   errorMessage: 'Database operation failed, please try again.',
             //   validationErrors: []
             // });
-            // res.redirect('/500');
+            // res.redirect('/500'); */
             const error = new Error(err);
             error.httpStatusCode = 500;
             return next(error);
@@ -106,6 +109,8 @@ exports.getEditProduct = (req, res, next) => {
             return next(error);
         });
 };
+
+//Editing middleware
 
 exports.postEditProduct = (req, res, next) => {
     const prodId = req.body.productId;
@@ -155,6 +160,8 @@ exports.postEditProduct = (req, res, next) => {
         });
 };
 
+//getting all products middleware
+
 exports.getProducts = (req, res, next) => {
     Product.find({
             userId: req.user._id
@@ -175,6 +182,8 @@ exports.getProducts = (req, res, next) => {
             return next(error);
         });
 };
+
+//deleting product middleware 
 
 exports.postDeleteProduct = (req, res, next) => {
     const prodId = req.body.productId;

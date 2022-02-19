@@ -1,6 +1,6 @@
 const Product = require('../models/product');
 const Order = require('../models/order');
-
+//getting shop products middleware
 exports.getProducts = (req, res, next) => {
     Product.find()
         .then(products => {
@@ -17,7 +17,7 @@ exports.getProducts = (req, res, next) => {
             return next(error);
         });
 };
-
+//posting shop products middleware
 exports.getProduct = (req, res, next) => {
     const prodId = req.params.productId;
     Product.findById(prodId)
@@ -35,6 +35,7 @@ exports.getProduct = (req, res, next) => {
         });
 };
 
+//getting shop index middleware
 exports.getIndex = (req, res, next) => {
     Product.find()
         .then(products => {
@@ -50,7 +51,7 @@ exports.getIndex = (req, res, next) => {
             return next(error);
         });
 };
-
+//getting cart middleware
 exports.getCart = (req, res, next) => {
     req.user
         .populate('cart.items.productId')
@@ -70,6 +71,7 @@ exports.getCart = (req, res, next) => {
         });
 };
 
+//posting cart middleware
 exports.postCart = (req, res, next) => {
     const prodId = req.body.productId;
     Product.findById(prodId)
@@ -87,6 +89,8 @@ exports.postCart = (req, res, next) => {
         });
 };
 
+//Deleting cart products middleware
+
 exports.postCartDeleteProduct = (req, res, next) => {
     const prodId = req.body.productId;
     req.user
@@ -100,6 +104,8 @@ exports.postCartDeleteProduct = (req, res, next) => {
             return next(error);
         });
 };
+
+//posting oreders middleware
 
 exports.postOrder = (req, res, next) => {
     req.user
@@ -135,6 +141,8 @@ exports.postOrder = (req, res, next) => {
             return next(error);
         });
 };
+
+//getting orders middleware
 
 exports.getOrders = (req, res, next) => {
     Order.find({
