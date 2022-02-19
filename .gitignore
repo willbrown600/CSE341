@@ -1,5 +1,7 @@
 node_modules
+*.env
 Week02.txt
 Week03.txt
 Week04.txt
 Week05.txt
+Week06.txt

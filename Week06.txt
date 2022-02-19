@@ -2,24 +2,24 @@ After completing the assignment, be sure to push to Github and Heroku.
 Please answer the questions in this text file and submit it to I-Learn.
 
 1. Copy and paste the URL for your web application (e.g., Heroku):
-https://cse341bills5.herokuapp.com/
+https://cse341bills6.herokuapp.com/
 https://cse341billsprojects.herokuapp.com
 
 2. Copy and paste the URL for your source code repository (e.g., GitHub):
 https://github.com/willbrown600/CSE341
 https://github.com/willbrown600/CSE341-Projects
 
-3. Briefly list and describe the elements of the application that are functioning. Most things are not running as they should. I am struggling to understand heroku.
+3. Briefly list and describe the elements of the application that are functioning. I was able to understand more about the authentication and appreciated learning more about that.
 
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
 Heroku. 
 
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
-Nothing is cool until it actually works.
+I have a couple of small wins so that has been helpful. But I am still not where I was hoping to be.
 
 6. If you could change this assignment to be more effective or helpful, what would you change?
 
-More assistance with learning. I'm just trying to keep up and understand what it is I am learning.
+More heroku training.
 
 7. Please select the category you feel best describes your assignment:
    
@@ -28,7 +28,7 @@ More assistance with learning. I'm just trying to keep up and understand what it
 
 8. Provide a brief justification (1-2 sentences) for selecting that category.
 
-I am frustrated and feel like this whole course was designed to set us all up to fail.
+I am still frustrated but believe I have maybe turned a corner. I am still behind on alot of what I am trying to achieve but am slowly getting there, having a couple of small wins along the way. I was angry and frustrated last week but after reading some of the announcements I feel better and am just trying to slowly work my way through some of the issues I am facing.
 
 
 
