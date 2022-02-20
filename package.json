@@ -2,7 +2,7 @@
     "name": "cse341",
     "version": "1.0.0",
     "description": "NodeJS projects",
-    "main": "section07",
+    "main": "/section07",
     "dependencies": {
         "body-parser": "^1.19.1",
         "ejs": "^3.1.6",
