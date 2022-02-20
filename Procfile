@@ -1,4 +1,4 @@
 
 
-web: node section07/app.js
+web: node app.js
 
