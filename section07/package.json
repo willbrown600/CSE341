@@ -2,11 +2,11 @@
     "name": "nodejs-complete-guide",
     "version": "1.0.0",
     "description": "Complete Node.js Guide",
-    "main": "app.js",
+    "main": "section07/app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon app.js",
-        "start-server": "node app.js"
+        "start": "node app.js",
+        "start-server": "nodemon app.js"
     },
     "author": "Will Brown",
     "license": "ISC",
