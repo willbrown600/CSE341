@@ -11,7 +11,7 @@ server.listen(8080); */
 const express = require('express');
 const bodyParser = require('body-parser');
 //Use script file
-const frontend = require('');
+const routes = require('./routes');
 //Create node project
 const app = express();
 
@@ -25,6 +25,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('script', script);
+app.use('/', routes);
 
 app.listen(8080);
